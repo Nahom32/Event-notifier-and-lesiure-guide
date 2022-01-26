@@ -1,0 +1,115 @@
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" th:href="@{../css/admin.css}">
+    <link rel="ICON" th:href="@{../images/Evento tab logo.jpg}" type="image/icon" />
+    
+</head>
+<body>
+    <div class="card__row card__row--header">
+        <div class="card__row__first card__row__first--col1">
+            <div class="card__row__first__name card__row__first__name--logo"><h1>E</h1></div>
+            <div class=" card__row__first__name--title"><h1 class="card__row__first__name__heading">EVENTO</h1></div>
+        </div>
+        <div 
+        class="card__row__first card__row__first__name card__row__first--col2 " 
+        role="button">
+        <a class="card__row__first__link" >
+            <img class="card__row__first__link__img" src="../images/signin.png" width="30px"><form method="POST" th:action="@{/logout}">
+                <input type="submit" value="Logout"/>
+                </form></a></div>
+    </div>
+    <div><h1 class="title">ADMINSTRATOR <span class="title__page">PAGE</span></h1></div>
+    <div class="table table--user">
+        <h1 class="table__user">USER TABLE</h1>
+        <table>
+            <tr>
+                <th class="table__user__head">ID</th>
+                <th class="table__user__head">USER NAME</th>
+                <th class="table__user__head">FULL NAME</th>
+                <th class="table__user__head">DOB</th>
+                <th class="table__user__head">EMAIL</th>
+                <th class="table__user__head">STREET ADDRESS</th>
+                <th class="table__user__head">Delete USER</th>
+            </tr>
+            <tr th:each="i: ${USERS}">
+                <td th:text="${i.id}"></td>
+                <td th:text="${i.username}"></td>
+                <td th:text="${i.fullname}"></td>
+                <td th:text="${i.dateOfBirth}"></td>
+                <td th:text="${i.email}"></td>
+                <td th:text="${i.streetAddress}"></td>
+                <td  style="width: 5rem; padding: 0; margin: auto;"><a th:href="@{/admin/users/deleteAccount(id=${i.id})}" style="width: 5rem; padding: 0; margin: auto; margin-left: auto; margin-right: auto;"><button class="button button__delete" style="width: 10rem; padding: 0; margin: auto; margin-left: 0rem; margin-right: auto;">DELETE USER</button></a></td>
+            
+            </tr>
+        </table>
+        
+    </div>
+        
+        <div class="table table--unapproved">
+            <h1 class="table__user">UNAPPROVED TABLE</h1>
+            <table>
+                <tr>
+                    <th class="table__user__head">ID</th>
+                    <th class="table__user__head">COMPANY NAME</th>
+                    <th class="table__user__head">COMPANY Email</th>
+                    <th class="table__user__head">COMPANY TELEPHONE</th>
+                    <th class="table__user__head">STREET ADDRESS</th>
+                    <th class="table__user__head">USER NAME</th>
+                    <th class="table__user__head">APPROVE</th>
+                    <th class="table__user__head">Delete USER</th>
+                             
+                </tr>
+                <tr th:each="i:${UHOST}">
+                    <td th:text="${i.id}"></td>
+                    <td th:text="${i.organizationName}"></td>
+                    <td th:text="${i.email}"></td>
+                    <td th:text="${i.phone}"></td>
+                    <td th:text="${i.streetAddress}"></td>
+                    <td th:text="${i.username}"></td>
+                    <td  style="width: 5rem; padding: 0; margin: auto;"><a  th:href="@{admin/users/approve(id=${i.id})}" style="width: 5rem; padding: 0; margin: auto; margin-left: auto; margin-right: auto;"><button class="button button__delete" style="width: 10rem; padding: 0; margin: auto; margin-left: 0rem; margin-right: auto;">APPROVE</button></a></td>
+                    <td  style="width: 5rem; padding: 0; margin: auto;"><a th:href="@{/admin/host/deleteAccount(id=${i.id})}" style="width: 5rem; padding: 0; margin: auto; margin-left: auto; margin-right: auto;"><button class="button button__delete" style="width: 10rem; padding: 0; margin: auto; margin-left: 0rem; margin-right: auto;">DELETE HOST</button></a></td>
+ 
+    
+                    
+    
+                </tr>
+            </table>     
+        </div>
+
+        <div class="table table--unapproved">
+            <h1 class="table__user">APPROVED TABLE</h1>
+            <table>
+                <tr>
+                    <th class="table__user__head">ID</th>
+                    <th class="table__user__head">COMPANY NAME</th>
+                    <th class="table__user__head">COMPANY Email</th>
+                    <th class="table__user__head">COMPANY TELEPHONE</th>
+                    <th class="table__user__head">STREET ADDRESS</th>
+                    <th class="table__user__head">USER NAME</th>
+                    <th class="table__user__head">UNAPPROVE</th>
+                    <th class="table__user__head">Delete USER</th>
+                </tr>
+                <tr th:each="i:${VHOST}">
+                    <td th:text="${i.id}"></td>
+                    <td th:text="${i.organizationName}"></td>
+                    <td th:text="${i.email}"></td>
+                    <td th:text="${i.phone}"></td>
+                    <td th:text="${i.streetAddress}"></td>
+                    <td th:text="${i.username}"></td>
+                    <td  style="width: 5rem; padding: 0; margin: auto;"><a  th:href="@{admin/users/approve(id=${i.id})}" style="width: 5rem; padding: 0; margin: auto; margin-left: auto; margin-right: auto;"><button class="button button__delete" style="width: 10rem; padding: 0; margin: auto; margin-left: 0rem; margin-right: auto;">UNAPPROVE</button></a></td> 
+                    <td  style="width: 5rem; padding: 0; margin: auto;"><a th:href="@{/admin/host/deleteAccount(id=${i.id})}" style="width: 5rem; padding: 0; margin: auto; margin-left: auto; margin-right: auto;"><button class="button button__delete" style="width: 10rem; padding: 0; margin: auto; margin-left: 0rem; margin-right: auto;">DELETE HOST</button></a></td>   
+                   
+                </tr>
+            </table>
+        </div>
+        <br><br><br>
+        <a th:href="@{/admin/updateEvent}"><button class="button button--approve">REFINE EVENT<br>
+        <small>remove events that are old</small></button></a>
+    
+    
+</body>
+</html>
