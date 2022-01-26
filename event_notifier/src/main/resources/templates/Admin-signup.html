@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host-signup</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/normal2.css}" rel="stylesheet">
+    <link rel="ICON" th:href="@{../images/Evento tab logo.jpg}" type="image/icon" />
+    
+</head>
+<body>
+    <section class="container">
+        <section class="row header logo" id="section-1" >
+            <div class="logo-E">
+                <h1>E</h1>
+            </div>
+            <h1 class="logo-evento">EVENTO</h1>
+        </section>
+        <section class="row" id="section-2" role="main">
+               <h2> Sign up -> Admin</h2>
+                <form method="POST" th:action="@{/signup/admin}" id="hostRegisterForm">    
+                    <section id="container-grid">
+                        <section id="sub-1" class="col">
+
+                            <input 
+                            class="form-control"
+                            type="text" 
+                            name="fullname"  
+                            placeholder="Full Name" 
+                            id="fullame" 
+                            ><br>
+
+                            <input 
+                            class="form-control" 
+                            type="text" 
+                            name="username"
+                            placeholder="Preffered Username" 
+                            id="username" 
+                            ><br>
+
+                            <input 
+                            class="form-control" 
+                            type="password" 
+                            name="password"
+                            placeholder="Password" 
+                            id="password" 
+                            ><br>
+
+                            <input 
+                            class="form-control" 
+                            type="password" 
+                            name="confirm"
+                            placeholder="Confirm Password" 
+                            id="confirm" 
+                            ><br>
+
+                            <input 
+                            class="form-control" 
+                            type="email" 
+                            name="email"
+                            placeholder="Email address" 
+                            id="email" 
+                            ><br>
+
+                            <input                             
+                            class="form-control" 
+                            type="text" 
+                            name="streetAddress"
+                            placeholder="Street address" 
+                            id="streetAddress" 
+                            ><br>
+
+                            <input 
+                            class="form-control" 
+                            type="text" 
+                            name="phone"
+                            placeholder="Telephone No." 
+                            id="phone" 
+                            ><br>
+
+                        </section>
+                        <section id="sub-2" class="col">
+                            <!-- <p>Please attach your identification and proof of legal ownership of the organization: </p>
+
+                            <textarea class="form-control" rows="5" cols="70"></textarea><br>
+                            <button class="btn btn-secondary btn-sm" >Add File</button>&nbsp;
+                            <button class="btn btn-secondary btn-sm" >Attach</button><br><br><br> -->
+                            
+                            <input type="checkbox">&nbsp;
+                            I have agreed to take full responsibility for the events posted in this account and I will be held responsible for any kind of forgery through this account <br><br>
+                            <input type="checkbox">&nbsp;
+                            I have accepted and agreed to the license agreement
+
+                            <br><br>
+                            <button type="submit" value="signup" class="btn btn-outline-success" style="margin-left: 40%;"> Sign Up </button>
+                        </section>
+                    </section>
+                </form>
+            </section>
+        </section>
+        <section class="row" id="section-3" role="doc-footnote"></section>
+    </section>
+</body>
+</html>

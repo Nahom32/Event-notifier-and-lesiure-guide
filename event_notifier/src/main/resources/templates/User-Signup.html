@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-signup</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/normal2.css}" rel="stylesheet">
+</head>
+<body>
+    <section class="container">
+        <section class="row header logo" id="section-1" >
+            <div class="logo-E">
+                <h1>E</h1>
+            </div>
+            <h1 class="logo-evento">EVENTO</h1>
+        </section>
+        <section class="row" id="section-2" role="main">
+            <h2> Sign up -> User</h2><br>
+            <form method="POST" th:action="@{/signup/user}" id="userRegisterForm" th:object= "${USER}">
+                <section id="container-grid">    
+                    <section id="sub-1" class="col">
+                        <input class="form-control"  th:field="*{fullname}" 
+                        th:class="|form-control ${#fields.hasErrors('fullname')? 'is-invalid': 'is-valid'}|" placeholder="Full Name" id="fullname" type="text" >
+                        <div class="invalid-feedback" th:if="${#fields.hasErrors('fullname')}"
+ th:errors="*{fullname}"
+></div>
+
+                        <input class="form-control" th:field="*{dateOfBirth}" 
+                        th:class="|form-control ${#fields.hasErrors('dateOfBirth')? 'is-invalid': 'is-valid'}|" placeholder="Date of Birth" id="dateOfBirth" type="text" >
+                        <div class="invalid-feedback" th:if="${#fields.hasErrors('dateOfBirth')}"
+ th:errors="*{dateOfBirth}"
+></div>
+
+                        <input class="form-control" th:field="*{username}"
+                        th:class="|form-control ${#fields.hasErrors('username')? 'is-invalid': 'is-valid'}|" placeholder="Preffered Username" id="username" type="text" >
+                        <div class="invalid-feedback" th:if="${#fields.hasErrors('username')}"
+ th:errors="*{username}"
+></div>
+                        <input class="form-control" th:field="*{password}"
+                        th:class="|form-control ${#fields.hasErrors('password')? 'is-invalid': 'is-valid'}|" placeholder="Password" id="password" type="password" >
+                        <div class="invalid-feedback" th:if="${#fields.hasErrors('password')}"
+ th:errors="*{password}"
+></div>
+                        <!-- <input class="form-control" th:field="*{confirm}" 
+                        th:class="|form-control ${#fields.hasErrors('confirm')? 'is-invalid': 'is-valid'}|" placeholder="Confirm Password" id="confirm" type="password">
+                        <div class="invalid-feedback" th:if="${#fields.hasErrors('confirm')}"
+ th:errors="*{confirm}"
+></div> -->
+                        <input class="form-control" th:field="*{email}"
+                        th:class="|form-control ${#fields.hasErrors('email')? 'is-invalid': 'is-valid'}|" placeholder="Email address" id="email" type="email" name="email">
+                        <div class="invalid-feedback" th:if="${#fields.hasErrors('email')}"
+ th:errors="*{email}"
+></div>
+
+                        <input class="form-control" th:field="*{streetAddress}"
+                        th:class="|form-control ${#fields.hasErrors('streetAddress')? 'is-invalid': 'is-valid'}|" placeholder="Street address" id="streetAddress" type="text" name="streetAddress">
+                        <div class="invalid-feedback" th:if="${#fields.hasErrors('streetAddress')}"
+ th:errors="*{streetAddress}"
+></div>
+
+                        <input class="form-control" th:field="*{phone}"
+                        th:class="|form-control ${#fields.hasErrors('phone')? 'is-invalid': 'is-valid'}|" placeholder="Telephone No." id="phone" type="text" name="phone">
+                        <div class="invalid-feedback" th:if="${#fields.hasErrors('phone')}"
+ th:errors="*{phone}"
+></div>
+
+                    </section>
+                    <section id="sub-2" style="padding-top: 1vh;" role="main">
+                        <h3>What kinds of events are you interested in?</h3>
+                        <table class="table table-hover">
+                            <tr>
+                            <th>First choice:&nbsp;</th>
+                            <td> 
+                            <select required name="choice1" th:field= "*{choice1}">
+                                <option value="Travel">Travel</option>
+                                <option value= "Food fest">Food fest</option>
+                                <option value="Educational">Educational</option>
+                                <option value="Sports">Sports</option>
+                                <option value="Niight life">Night life</option>
+                            </select></td></tr>
+                            <tr>
+                            <th>Second choice:&nbsp;</th>
+                            <td> 
+                            <select required name="choice2" th:field= "*{choice2}">
+                                <option value="Travel">Travel</option>
+                                <option value= "Food fest">Food fest</option>
+                                <option value="Educational">Educational</option>
+                                <option value="Sports">Sports</option>
+                                <option value="Niight life">Night life</option>
+                            </select></td></tr>
+                            <tr>
+                            <th>Third choice:&nbsp;</th>
+                            <td> 
+                            <select required name="choice3" th:field="*{choice3}">
+                                <option value="Travel">Travel</option>
+                                <option value= "Food fest">Food fest</option>
+                                <option value="Educational">Educational</option>
+                                <option value="Sports">Sports</option>
+                                <option value="Niight life">Night life</option>
+                            </select></td></tr>
+                            <tr>
+                            <th>Fourth choice:&nbsp;</th>
+                            <td> 
+                            <select name="choice4" th:field="*{choice4}">
+                                <option value="Travel">Travel</option>
+                                <option value= "Food fest">Food fest</option>
+                                <option value="Educational">Educational</option>
+                                <option value="Sports">Sports</option>
+                                <option value="Niight life">Night life</option>
+                            </select></td></tr>
+                            <tr>
+                            <th>Last choice:&nbsp;</th>
+                            <td> 
+                            <select name="choice5" th:field="*{choice5}">
+                                <option value="Travel">Travel</option>
+                                <option value= "Food fest">Food fest</option>
+                                <option value="Educational">Educational</option>
+                                <option value="Sports">Sports</option>
+                                <option value="Niight life">Night life</option>
+                            </select></td></tr>
+                        </table><br><br>
+                        <input type="checkbox" required>&nbsp; I have chosen my interests in the above form.<br><br>
+                        <input type="checkbox" required>&nbsp; I have accepted and agreed to the license agreement
+                        <br><br><br>
+                        <button type="submit" class="btn btn-outline-success" style="margin-left: 20%;"> Sign-Up </button>
+                    </section>
+                </section>
+            </form>
+        </section>
+        <section class="row" id="section-3" role="doc-footnote"></section>
+    </section>
+</body>
+</html>
