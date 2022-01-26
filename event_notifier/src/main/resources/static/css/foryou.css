@@ -1,0 +1,385 @@
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color: black;
+}
+.top nav{
+    background-color: transparent;
+    border: none;
+    height: 3rem;
+    width: 3rem;
+    padding: 0;
+    margin: 0;
+}
+
+.top nav ul{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+}
+
+.top li{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    border: 1px solid black;
+    width: 10rem;
+}
+
+nav ul li{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav ul a{
+    color: black;
+    padding-left: auto;
+    padding-right: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 10rem;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav{
+    margin: 0;
+    padding: 0;
+    margin-left: -1rem;
+    display:none;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+html{
+    max-width: 100vw;
+    height: 100%;
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    max-width: 2000px;
+    background-color: white;
+    height: 100vw;
+}
+
+header{
+    background-color: #967171;
+    height: 9.8rem;
+}
+
+header .top{
+    display: flex;
+    align-content: space-between;
+}
+
+header .logo{
+    margin-top: .5rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.logo-E{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 5rem;
+    width: 5.5rem;
+}
+
+.logo h1{
+    font-family: 'Amiri','Courier New', Courier, monospace;
+    color: white;
+    margin-left: .3rem;
+    margin-top: 1rem;
+}
+
+.logo-E h1{
+    color: white;
+    font-size: 5rem;
+    font-family: 'Angkor','Courier New', Courier, monospace;
+    font-weight: bolder;
+    padding: auto;
+    margin: 0;
+    margin-right: .7rem;
+    margin-left: .5rem;
+    margin-top: .5rem;
+}
+
+.profile{
+    margin-left: auto;
+}
+
+.profile-img{
+    margin-top: .7rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.profile p{
+    display: none;
+}
+
+#menu{
+    display: none;
+}
+
+.menu{
+    margin-top: .7rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+header nav{
+    display: none;
+}
+
+header #menu-onof:checked ~ nav{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    width: 16rem;
+    position: absolute;
+    background-color: #967171;
+    border: 1% solid black;
+    top: 5rem;
+    right: 0rem;
+}
+
+header .form{
+    margin-top: .5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20rem;
+    height: 30px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+}
+
+header input{
+    flex: 1;
+    width: 17rem;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+.form svg{
+    color: #777;
+}
+
+.top #menu-onof{
+    display: none;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main .post{
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.btn{
+    background-color: #BACCCC;
+    border: none;
+}
+
+.card{
+    margin: 0;
+    padding: 0;
+    height: 30rem;
+}
+
+.card-text{
+    height: 5rem;
+    width: auto;
+}
+
+.card-img-top{
+    height: 10rem;
+    width: auto;
+}
+
+@media(min-width: 576px ){
+    .card-text{
+        overflow-y: scroll;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+      /* Track */
+    ::-webkit-scrollbar-track {
+        background: white;
+      }
+      
+      /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: rgb(218, 217, 217);
+      }
+      
+      /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(158, 158, 158);
+      }
+}
+
+@media(min-width:800px){
+    .top li{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+
+    .mini-data{
+        display: none;
+    }
+
+    .top nav{
+        display: none;
+    }
+
+    .top nav ul{
+        display: none;
+    }
+
+    .profile{
+        height: 2.5rem;
+        margin-left: auto;
+        margin-right: 1.5rem;
+        margin-top: .5rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .profile a{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .profile a p{
+        display: block;
+        margin-top: .7rem;
+        margin-left: .4rem;
+    }
+    
+    .profile p{
+        display: block;
+    }
+
+    
+    header nav{
+        width: 100%;
+        margin-left: auto;
+        margin-top: -1.5rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-end;
+        border: none;
+    }
+    nav ul{
+        list-style-type: none;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+
+    nav a{
+        margin: auto;
+        text-decoration: none;
+        background-color: #BACCCC;
+        color: black;
+        padding: .2rem 1.3rem;
+        border-radius: 1rem;
+    }
+
+    main{
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .post{
+        padding: 1rem 1rem;
+    }
+
+    a:hover{
+        background-color: #9DB6B6;
+    }
+
+    .post .card .card-body .btn{
+        background-color: #BACCCC;
+        border: none;
+        outline: none;
+    }
+
+    .post .card .card-body .btn:hover{
+        background-color: #9DB6B6;
+        border: none;
+        outline: none;
+    }
+
+    .profile a:hover{
+        background-color: transparent;
+        color: lightblue;
+        text-decoration: none;
+    }
+
+}
+
+
+
+
+
+
+
+

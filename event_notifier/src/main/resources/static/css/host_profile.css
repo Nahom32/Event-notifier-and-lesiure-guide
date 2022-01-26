@@ -1,0 +1,249 @@
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+html{
+    max-width: 100%;
+    height: auto;
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    max-width: 2000px;
+    height: auto;
+    padding-bottom: 1rem;
+}
+
+header{
+    background-color: #967171;
+    padding: .5rem;
+    display: flex;
+}
+
+header .top{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+header .logo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.logo-E{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 6rem;
+    width: 6.5rem;
+    margin-left: 1rem;
+}
+
+.logo-evento{
+    font-family: 'Amiri','Courier New', Courier, monospace;
+    font-weight: 500;
+    color: white;
+    margin-left: .3rem;
+    margin-top: 1.2rem;
+    font-size: 3rem;
+}
+
+.logo-E h1{
+    color: white;
+    font-size: 6rem;
+    font-family: 'Angkor','Courier New', Courier, monospace;
+    font-weight: bolder;
+    padding: auto;
+    margin: 0;
+    margin-right: .7rem;
+    margin-left: .5rem;
+    margin-top: .5rem;
+}
+
+.top .profile{
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.profile button{
+    background-color: #BACCCC;
+    border-radius: 1rem;
+    padding: .1rem 1rem;
+    box-shadow: none;
+    text-decoration: none;
+    cursor: pointer;
+    padding-bottom: .25rem;
+    outline: none;
+    border-style: none;
+}
+
+.container{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+}
+
+main .img_container{
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.user-data{
+    width: auto;
+}
+
+.profile_pic{
+    max-height: 15rem;
+    max-width: 15rem;
+    border-radius: 50%;
+}
+
+main a, button{
+    background-color: #BACCCC;
+    padding: .1rem 1rem .3rem 1rem;
+    border: none;
+    outline: none;
+}
+
+.update__form{
+    margin: auto;
+    margin-top: 1rem;
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+body .update__form section{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.update__form input{
+    width: 100%;
+}
+
+
+@media(max-width:500px){
+    body{
+        padding: .3rem;
+    }
+    
+    main form{
+        width: 15rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-E{
+        background-color: black;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        height: 5rem;
+        width: 5.5rem;
+    }
+    
+    .logo-evento{
+        font-family: 'Amiri','Courier New', Courier, monospace;
+        font-weight: 500;
+        color: white;
+        margin-left: .3rem;
+        margin-top: 1.6rem;
+        font-size: 1.4rem;
+    }
+    
+    .logo-E h1{
+        color: white;
+        font-size: 5rem;
+        font-family: 'Angkor','Courier New', Courier, monospace;
+        font-weight: bolder;
+        padding: auto;
+        margin: 0;
+        margin-right: .7rem;
+        margin-left: .5rem;
+        margin-top: .5rem;
+    }
+    
+    
+    .top .profile{
+        margin-left: auto;
+        margin-right: .2rem;
+        display: flex;
+        flex-direction: row;
+        flex-direction: nowrap;
+        align-content: flex-start;
+        align-items: flex-start;
+        justify-content: start;
+    }
+
+    .profile button{
+        font-size: .7rem;
+        padding: .1rem .3rem;
+    }
+}
+
+@media (max-width: 600px){
+    main .user-data{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    main .img_container{
+        width: 100%;
+    }
+}
+
+@media(min-width: 1000px){
+    .profile button:hover{
+        background-color: #a4bbbb;
+        outline: none;
+    }
+
+    main a:hover, button:hover{
+        background-color: #a4bbbb;
+        
+    }
+}
