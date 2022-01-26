@@ -1,0 +1,47 @@
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" th:href="@{../css/admin.css}">
+    <link rel="ICON" th:href="@{../images/Evento tab logo.jpg}" type="image/icon" />
+    
+</head>
+<body>
+    <div class="card__row card__row--header">
+        <div class="card__row__first card__row__first--col1">
+            <div class="card__row__first__name card__row__first__name--logo"><h1>E</h1></div>
+            <div class=" card__row__first__name--title"><h1 class="card__row__first__name__heading">EVENTO</h1></div>
+        </div>
+        <div class="card__row__first card__row__first__name card__row__first--col2 " role="button"><a class="card__row__first__link" href=""><img class="card__row__first__link__img" src="../images/signin.png" width="30px"><form method="POST" th:action="@{/logout}">
+            <input type="submit" value="Logout"/>
+            </form></a></div>
+    </div>
+    <div><h1 class="title">LIST OF <span class="title__page">ORGANIZERS</span></h1></div>
+    <div class="table table--unapproved">
+      <h1 class="table__user"><span class="title__page">ORGANIZRS</span></h1>
+      <table>
+        <tr>
+            <th class="table__user__head">ID</th>
+            <th class="table__user__head">COMPANY NAME</th>
+            <th class="table__user__head">COMPANY Email</th>
+            <th class="table__user__head">COMPANY TELEPHONE</th>
+            <th class="table__user__head">STREET ADDRESS</th>
+            <th class="table__user__head">USER NAME</th>
+        </tr>
+        <tr th:each="i:${ORGANIZERS}">
+            <td th:text="${i.id}"></td>
+            <td th:text="${i.organizationName}"></td>
+            <td th:text="${i.email}"></td>
+            <td th:text="${i.phone}"></td>
+            <td th:text="${i.streetAddress}"></td>
+            <td th:text="${i.username}"></td>
+
+            
+
+        </tr>
+    </table> 
+  </div>
+  </body>
+  </html>
