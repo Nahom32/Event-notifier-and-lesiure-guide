@@ -1,0 +1,59 @@
+html{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    background-image: url(../images/DJset-1024x768.png);
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(8px);
+    height: 100%;
+    width: 100vw;
+    font-family: 'Sigmar One', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+body div{
+    background-color: white;
+    opacity: .9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border: 2px solid #967171;
+    padding: 1rem;
+    box-shadow: 3px 3px 15px 3px #967171;
+}
+
+div h1{
+    font-size: 10rem;
+}
+
+div .form-control{
+    font-size: 1.1rem;
+    padding: .2rem 1rem;
+    background-color: #967171;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div .form-control:hover{
+    background-color: #7e5f5f;
+    cursor: pointer;
+}
+
+div .form-control:active{
+    background-color: #6e4f4f;
+    color: #BACCCC;
+    box-shadow: none;
+    border: 1px solid black;
+    outline: none;
+}
