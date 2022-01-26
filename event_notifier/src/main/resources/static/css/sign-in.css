@@ -1,0 +1,140 @@
+#section-1{
+    border-bottom: 1px solid #967171; 
+    margin-bottom: 10vh; 
+    padding-top: 1.5em; 
+    padding-bottom: 1.5em ; 
+    background-color: #967171; 
+    color: #fff;
+}
+.top .logo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.logo-E{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 6rem;
+    width: 6.5rem;
+    margin-left: 1rem;
+}
+
+.logo-evento{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Amiri','Courier New', Courier, monospace;
+    font-weight: 500;
+    color: white;
+    margin-left: .3rem;
+    margin-top: 1.2rem;
+    font-size: 3rem;
+}
+
+.logo-E h1{
+    color: white;
+    font-size: 6rem;
+    font-family: 'Angkor','Courier New', Courier, monospace;
+    font-weight: bolder;
+    padding: auto;
+    margin: 0;
+    margin-right: .7rem;
+    margin-left: .5rem;
+    margin-top: .5rem;
+}
+
+
+/* #section-2 #sub-1 form{
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+}
+
+#sub-1{
+    text-align: center;
+    margin: 10%; 
+    padding: 20%; 
+    padding-top: 0; 
+    padding-bottom: 0;
+} */
+/* button{
+    font-size: 0.7em; 
+    background-color: #bacccc; 
+    border: #bacccc; 
+    color: black;
+} */
+.hide-1{
+    display: none;
+}
+.hide-2{
+    display: none;
+}
+.hide-3{
+    display: none;
+}
+#sub-1 h2{
+    margin-bottom: 5vh;
+}
+div{
+    margin-top: 5vh;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #967171;
+    text-decoration: underline;
+}
+form{
+    margin-top: 2vh;
+}
+#section-3{
+    margin: 10vh; 
+    color: #fff; 
+    background-color: #967171;
+}
+p{
+    margin-top: 5vh;
+}
+
+@media (min-width: 701px){
+    #sub-2{
+        border-left: 1px solid #967171;
+        padding-left: 10vh ;
+    }
+}
+    
+@media (max-width: 768px){
+    #container-grid{
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-gap: 5vh;
+    }
+    #section-1{
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    #sub-1{
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    #sub-1 form input{
+        width: 90%;
+    }
+    #section-3{
+        grid-row-start: 3;
+        grid-row-end: 4;}
+    }
+@media(max-width: 554px){
+    #sub-1 p{
+        font-size: 2.5vw;
+    }
+}
