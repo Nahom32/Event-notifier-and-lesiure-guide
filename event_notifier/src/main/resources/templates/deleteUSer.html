@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css}">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Angkor&display=swap}" rel="stylesheet">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Angkor&display=swap}" rel="stylesheet">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+<link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+<link th:href="@{https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{../css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{../css/deleteUser.css}">
+    <link rel="ICON" th:href="@{../images/Evento tab logo.jpg}" type="image/icon" />
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div class="logo">
+                <div class="logo-E">
+                    <h1>E</h1>
+                </div>
+                <h1 class="logo-evento">EVENTO</h1>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <main>
+        <section class="message">
+            <P class="message__one">     
+                ALL ACTIONS IN THIS PAGE SHOULD BE EXECUTED ACCORDING TO THE TERMS AND CONDITIONS OF THE COMPANY.
+            </P>
+            <section class="message__caution">
+                <img class="message__caution__img" th:src="@{../images/download.png}" alt="caution"><p class="message__caution__text">PROCEED WITH CAUTION!</p>
+            </section>
+        </section>
+        <form th:action="@{/admin/users/deleteAccount}" th:object="${user}" method="post">
+            <input style="display: none;" type="text" th:field="${user.id}" >
+            <input type="submit" >
+        </form>
+    </main>  
+</body>
+</html>

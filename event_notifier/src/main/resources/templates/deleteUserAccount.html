@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Error</title>
+        <link rel="ICON" th:href="@{../images/Evento tab logo.png}" type="image/icon" />
+        <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+        <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+        <link th:href="@{https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap}" rel="stylesheet">
+        <link rel="stylesheet" th:href="@{../css/bootstrap.min.css}">
+        <link rel="stylesheet" th:href="@{../css/errorpage.css}">
+    </head>
+<body>
+    <div class="">
+        <h1>SUCSESSFULY DELETED</h1>
+       
+        <p>You can go back to home</p>
+        <div 
+        class="card__row__first card__row__first__name card__row__first--col2 " 
+        role="button">
+        <a class="card__row__first__link" >
+            <img class="card__row__first__link__img" src="../images/signin.png" width="30px"><form method="POST" th:action="@{/logout}">
+                <input type="submit" value="Logout"/>
+                </form></a></div>
+    </div>
+</body>
+</html>
