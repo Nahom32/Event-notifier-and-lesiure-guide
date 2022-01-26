@@ -1,0 +1,146 @@
+
+.card__row--header{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    margin-top: 1rem;
+
+
+
+}
+.card__row__first__name--title{
+    margin-top: .5rem;
+    margin-left: 1rem;
+ 
+
+    font-family: 'Amiri','Courier New', Courier, monospace;
+    color: white;
+    margin-left: .3rem;
+    margin-top: 1rem;
+}
+.card__row__first__name--logo h1{
+
+    color: white;
+    font-size: 5rem;
+    font-family: 'Angkor','Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+.card__row__first__name--logo{
+    
+    background-color: black;
+    padding-top:.7rem;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 5rem;
+    width: 5.5rem;
+
+
+ 
+}
+.card__row__first__link__img{
+    display:none;
+    
+}
+.card__row__first--col1{
+    display: flex;
+
+}
+.card__row__first--col1{
+    display: flex;
+
+}
+.card__row__first__name--logo{
+    align-self: center;
+}
+
+.card__row__first__name__heading{
+    align-self: center;
+}
+.card__row__first--col2{
+    margin-left: auto;
+}
+.button{
+    border:none;
+    background-color: #BACCCC;
+}
+
+.button__sign {
+    background-color: #967171;
+    color: white;
+    font-family: Roboto, sans-serif;
+}
+
+
+.card__row__first__name--logo{
+    background-color: #967171;
+}
+.card__row__first__name--logo h1{
+
+    color: white;
+} 
+.title{
+    text-align:center;
+    font-size: larger;
+    font-family: Questrial,serif;
+
+}
+.title__page{
+    color:#967171;
+
+}
+.table{
+    margin-left: 10vw;
+    margin-right: auto;
+
+}
+
+.table__user__head,td{
+    font-family: sans-serif;
+    max-width:max-content;
+    min-width:10vw;
+    border:solid black thin;
+    font-weight:400;
+
+}
+.button__delete{
+    margin-left:29rem;
+    margin-right:1rem;
+}
+.button--approve{
+    margin-left:40vw;
+    margin-right:1rem;
+}
+ 
+h1{
+    font-size:1rem;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+}
+
+table td,table th{
+    width: 10rem;
+}
+button{
+    margin: 0;
+    padding: 0;
+}
+
+@media all and (max-width:505px){
+    .button__sign{
+        display: none;
+    }
+         
+    .card__row__first__link__img {
+        display:block;
+        margin-right: 0.5rem;
+
+    }
+    .card__row__first__link__img:hover{
+        border-radius:1rem;
+        padding:0.2rem;
+        background-color:rgba(0, 0, 0, 0.104);
+    }
+}

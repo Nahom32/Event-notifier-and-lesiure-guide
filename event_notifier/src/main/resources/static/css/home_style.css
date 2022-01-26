@@ -1,0 +1,394 @@
+
+html{
+
+    padding: 0;
+    width: 100vw;
+
+}
+
+body{
+    margin: 0;
+    width: 100vw;
+}
+.container{
+ flex-wrap: wrap;
+
+    
+}
+
+.card{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    justify-content: space-evenly;
+   
+
+}
+.card__row{
+    justify-content: space-between;
+    
+
+}
+
+.card--first{
+    padding-top:1rem;
+    background: linear-gradient(107deg,#967171 50%, white 50%); 
+    background-repeat: none;
+    background-size: cover;
+    
+}
+
+
+.card__row__first__name--title{
+    margin-top: .5rem;
+    margin-left: 1rem;
+ 
+
+    font-family: 'Amiri','Courier New', Courier, monospace;
+    color: white;
+    margin-left: .3rem;
+    margin-top: 1rem;
+}
+
+.card__row__first__name--logo{
+    
+    background-color: black;
+    padding-top:.7rem;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 5rem;
+    width: 5.5rem;
+
+
+ 
+}
+.card__row__first__name--logo h1{
+
+    color: white;
+    font-size: 5rem;
+    font-family: 'Angkor','Courier New', Courier, monospace;
+    font-weight: bolder;
+
+}
+
+
+
+.card__row--header{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    margin-top: 1rem;
+
+
+
+}
+.card__row__first--col1{
+    display: flex;
+
+}
+.card__row__first__name--logo{
+    align-self: center;
+}
+
+.card__row__first__name__heading{
+    align-self: center;
+}
+.card__row__first--col2{
+    margin-left: auto;
+}
+
+.card__row__first__link__img{
+    display:none;
+    
+}
+
+.button__sign{
+    font-size: 1rem;
+    margin-right: 0.5rem;  
+    
+    color: black;
+    background-color: #BACCCC;
+    border-radius: 1rem;
+    padding: .5rem;
+    border:none;
+
+}
+
+.card__row--title{
+    width:100%;
+    font-size:  6vw;
+    justify-self:center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 265px;
+    letter-spacing: 0.05em;
+    color: white;
+
+
+}
+.card__row__headline{
+    text-align: center;
+}
+.card__row__second__event{
+    color:#967171;
+    background-color: transparent;
+}
+.card__row--description{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card__row__third{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.card__row__third__heading,.card__row__third__detail{
+    align-self: flex-start;
+} 
+
+.card__row__third--text{
+    
+    margin-left: 1.5vw;
+    padding-right: 1vw;
+    width: 50vw;
+    min-width: 250px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    font-size:1.2rem;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    background-clip:content-box;
+    color: #FFFFFF;
+}
+
+.card__row__third__detail{
+    width:90%;
+}
+
+.card__row__third--image{
+    width:45vw;
+}
+
+
+.card__row__third__img{
+    min-width: 250px;
+    width:95%;
+}
+.card__row__img--explore{
+
+    object-fit:cover;
+}
+
+.card__row__fourth{
+    margin-top: 2rem;
+}
+
+.card__row--text{
+    letter-spacing: .1rem;
+}
+
+.card__row__heading{
+    font-size: 2.5rem;
+}
+
+.card__row__detail{
+    font-size: 1.2rem;
+}
+
+.card__row__fourth__button{
+    margin: 0;
+    border:none;
+    font-size:1.2rem;
+    background-color: #bacccc;
+    padding:1rem;
+    font-family:"Roboto", sans-serif;
+
+}
+
+
+.card--second{
+    margin-top:2rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #bacccc;
+}
+
+
+.card--third{
+    background-color: white;
+}
+.card--fourth{
+    background-color: #bacccc;
+}
+.card--fifth{
+    background-color: white;
+}
+.card--sixth{
+    display:flex;
+    flex-wrap: wrap;
+    background-color: #967171;
+}
+.card__row--social{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+.card__row--end{
+    width:100vw;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.card__row__img{
+    width: 20rem;
+    height: 20rem;
+}
+
+.card__row__seventh__link{
+    color: white;
+    text-decoration: none;
+}
+
+.new{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.card__row--social{
+    display: flex;
+    width: 50%;
+    margin: auto;
+    margin-bottom: .5rem;
+}
+
+.card__row__img{
+    padding: 1rem 4rem;
+}
+
+.card--sixth{
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+}
+
+@media(min-width: 800px){
+    .button__sign:hover, .card__row__fourth__button:hover{
+        background-color: #a1adad;
+    }
+    .card__row__first--col3{
+        margin-right: 2rem;
+    }
+}
+
+@media(max-width: 768px){
+    *{
+        color:#967171;
+    }
+    .card{
+        text-align: center;
+    }
+    
+    .card__row__third__heading,.card__row__third__detail{
+        align-self: center;
+    } 
+    
+    .card--first{
+        background:white;
+    
+        
+    }
+    .card__row__third--text{
+        background-color: #967171;
+        border-radius: 2rem;
+        justify-self: center;
+        margin:0;
+        text-align: center;
+    }
+    .card__row__third--image{
+
+        justify-content: center;
+    }
+    .button__sign {
+        background-color: #967171;
+        color: white;
+        font-family: Roboto, sans-serif;
+    }
+    .card__row__first__name--logo{
+        background-color: #967171;
+    }
+    .card__row__first__name--logo h1{
+
+        color: white;
+} 
+@media all and (max-width: 505px){
+
+  
+  
+    .button__sign{
+        display: none;
+    }
+         
+    .card__row__first__link__img {
+        display:block;
+        margin-right: 0.5rem;
+
+    }
+    .card__row__first__link__img:hover{
+        border-radius:1rem;
+        padding:0.2rem;
+        background-color:rgba(0, 0, 0, 0.104);
+    }
+    .card__row__second__event{
+        color:#967171;
+    }
+      
+    
+    }
+    .card__row__third--text{
+        background-color: initial;
+        width: 85vw;
+    
+    }
+    .card__row__third__heading{
+        font-size: 7vw;
+    }
+    .card__row__third__detail{
+        font-size: 4vw;
+        
+    }
+    .card__row__third--image{
+        align-self: flex-start;
+        width:85vw;
+    }
+    
+    .card__row__fourth__button{
+        font-size:3.5vw;
+        padding: 0.7rem;
+        justify-content: center;
+
+    }
+    
+}
+
+
+
+  

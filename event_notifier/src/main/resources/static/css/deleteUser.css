@@ -1,0 +1,156 @@
+body{
+    padding: 1rem;
+}
+
+header .top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+header .logo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.logo-E{
+    background-color: #967171;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 7rem;
+    width: 7.5rem;
+    margin-left: 1rem;
+}
+
+.logo-evento{
+    font-family: 'Amiri','Courier New', Courier, monospace;
+    font-weight: 500;
+    color: #967171;
+    margin-left: .3rem;
+    margin-top: 1.2rem;
+    font-size: 3.5rem;
+}
+
+.logo-E h1{
+    color: white;
+    font-size: 7rem;
+    font-family: 'Angkor','Courier New', Courier, monospace;
+    font-weight: bolder;
+    padding: auto;
+    margin: 0;
+    margin-right: .7rem;
+    margin-left: .5rem;
+    margin-top: .5rem;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.message__one{
+    font-size: 190%;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.message__caution{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.message__caution__img{
+    width: 10rem;
+    height: 10rem;
+}
+
+.message__caution__text{
+    font-size: 1.2rem;
+    color: orangered;
+}
+
+form{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-element{
+    margin: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn{
+    margin-left: .2rem;
+}
+
+.btn:hover{
+    background-color: rgb(255, 140, 98);
+}
+
+
+
+
+@media (max-width: 500px){
+    body{
+        padding: .3rem;
+    }
+
+    form{
+        width: 80%;
+    }
+    
+    .logo-E{
+        background-color: #967171;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        height: 5rem;
+        width: 5.5rem;
+    }
+    
+    .logo-evento{
+        font-family: 'Amiri','Courier New', Courier, monospace;
+        font-weight: 500;
+        color: #967171;
+        margin-left: .3rem;
+        margin-top: 1.6rem;
+        font-size: 1.4rem;
+    }
+    
+    .logo-E h1{
+        color: white;
+        font-size: 5rem;
+        font-family: 'Angkor','Courier New', Courier, monospace;
+        font-weight: bolder;
+        padding: auto;
+        margin: 0;
+        margin-right: .7rem;
+        margin-left: .5rem;
+        margin-top: .5rem;
+    }
+}
