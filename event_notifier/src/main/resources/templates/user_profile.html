@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE</title>
+    <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css}">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Angkor&display=swap}" rel="stylesheet">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Angkor&display=swap}" rel="stylesheet">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{../css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{../css/host_profile.css}">
+    <link rel="ICON" th:href="@{../images/Evento tab logo.jpg}" type="image/icon" />
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div class="logo">
+                <div class="logo-E">
+                    <h1>E</h1>
+                </div>
+                <h1 class="logo-evento">EVENTO</h1>
+            </div>
+            <div class="profile">
+              <form method="POST" th:action="@{/logout}">
+                  <input style="width :60px; margin: 18px; margin-bottom: 20px; border-radius: 10px;" type="submit" value="Logout"/>
+                  </form>
+          </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="img_container">
+            <img class="profile_pic" src="images/discover.jpg" alt="">
+        </div>
+        <div class="user-data">
+            <p> NAME: <span th:text="${user.fullname}"></span> </p>
+            <p> USER NAME: <span th:text="${user.username}"></span> </p>
+            <p> EMAIL: <span th:text="${user.email}"></span></p>
+            <p>TEL: <span th:text="${user.phone}"></span></p>
+            <p>Address: <span th:text="${user.streetAddress}"></span></p>
+        </div>
+        <form style="border-left: solid 1px black; padding-left:15px;"class="update__form" th:action="@{/profile/update/user}" th:object="${user}" method="post">
+          <section >
+              <section>
+                  FULL NAME:
+                  <input 
+                  class="form-control"
+                  type="text" 
+                  name="fullname"  
+                  th:placeholder="${user.fullname}" 
+                  th:field="${user.fullname}" 
+                  id="organizationName" 
+                  ><br>
+                  <input 
+                  style="display: none;"
+                  class="form-control"
+                  type="text" 
+                  name="fullname"  
+                  th:placeholder="${user.fullname}" 
+                  th:field="${user.id}" 
+                  id="organizationName" 
+                  ><br>
+  
+                  <input 
+                  class="form-control" 
+                  type="text" 
+                  name="username"
+                  th:placeholder="${user.username}" 
+                  th:field="${user.username}"
+                  id="username" 
+                  ><br>
+  
+                  <input 
+                  class="form-control" 
+                  type="email" 
+                  name="email"
+                  th:placeholder="${user.email}"
+                  th:field="${user.email}"  
+                  id="email" 
+                  ><br>
+  
+                  <input                             
+                  class="form-control" 
+                  type="text" 
+                  name="streetAddress"
+                  th:placeholder="${user.streetAddress}"
+                  th:field="${user.streetAddress}" 
+                  id="streetAddress" 
+                  ><br>
+  
+                  <input 
+                  class="form-control" 
+                  type="text" 
+                  name="phone"
+                  th:placeholder="${user.phone}"
+                  th:field="${user.phone}" 
+                  id="phone" 
+                  ><br>  
+              </section>
+              <button type="submit" class="btn btn-outline-success" style="margin-left: 20%;"> update </button><br><br>
+      </form>
+      <form th:action="@{/profile/delete/user/}" method="post">
+      <input type="text" th:field="${user.id}" style="display: none;">
+      <button type="submit" class="btn btn-outline-success" style="margin-left: 20%;"> delete account </button>
+    </form>
+    </main>
+</body>
+</html>

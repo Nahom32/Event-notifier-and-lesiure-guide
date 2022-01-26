@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORGANIZERS</title>
+    <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css}">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Angkor&display=swap}" rel="stylesheet">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Angkor&display=swap" rel="stylesheet">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{../css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{../css/host_home.css}">
+    <link rel="stylesheet" th:href="@{../css/foryou.css}">
+    <link rel="ICON" th:href="@{../images/Evento tab logo.jpg}" type="image/icon" />
+    
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div class="logo">
+                <div class="logo-E">
+                    <h1>E</h1>
+                </div>
+                <h1 class="logo-evento">EVENTO</h1>
+            </div>
+            <div class="profile">
+                <a th:href="@{/profile/host}"><img class="profile-img" th:src="@{../images/profile.png}" alt="profile"><p>Profile</p></a>
+                <div class="profile">
+                    <form method="POST" th:action="@{/logout}">
+                        <input style="width :60px; margin: 18px; margin-bottom: 20px; border-radius: 10px;" type="submit" value="Logout"/>
+                        </form>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <main>
+
+        <a th:href="@{/organizer}">Find Organizer</a>
+
+        <div>
+            <form th:action = "@{/make_events}" th:object = "${EVENT}"  method="post"  enctype="multipart/form-data">
+
+
+                <label for="event-name">Event name:</label>
+                <input th:field="*{eventName}" type="text" id="event-name" placeholder="Event name" class="form-control">
+                
+    
+    
+                <label for="catagories">Catagories:</label>
+                <select th:field="*{type1}" name="catagories" id="catagories"  class="form-control">
+                    <option value="Travel"  class="form-control">Travel</option>
+                    <option value="Food fest" class="form-control">Food Fest</option>
+                    <option value="Educational"  class="form-control">Educational</option>
+                    <option value="Sports"  class="form-control">Sports</option>
+                    <option value="Night life" class="form-control">Night Life</option>
+                </select>
+                <select th:field="*{type2}" name="catagories" id="catagories"  class="form-control">
+                    <option value="Travel"  class="form-control">Travel</option>
+                    <option value="Food fest" class="form-control">Food Fest</option>
+                    <option value="Educational"  class="form-control">Educational</option>
+                    <option value="Sports"  class="form-control">Sports</option>
+                    <option value="Night life" class="form-control">Night Life</option>
+                </select>
+    
+    
+                <!-- <label for="date">Event Starting Date: </label>
+                <input th:field="*{startDate}" type="text" name="start-date" id="date" class="form-control">
+                <label for="date">Event End Date: </label>
+                <input th:field="*{endDate}" type="text" name="end-date" id="date" class="form-control"> -->
+    
+                <label for="Location">Event location:</label>
+                <input th:field="*{location}" class="form-control" type="text" id="Location" placeholder="Describe the location">
+    
+                <img id="img" src="#" alt="your image" />
+                <div class="img-container">
+                    <label for="img-input">Inset your AD-image:</label>
+                    <input id="img-input" type="file" onchange="readURL(this);" name="image" accept="image/png, image/jpeg" title=" " />
+                </div>
+    
+    
+                <label for="description">Event Description</label>
+                <textarea th:field="*{eventDescription}"class="form-control" name="description" id="descritpiton" cols="20" rows="5"></textarea>
+                <input type="submit" class="form-control submit">
+                
+            </form>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+            <script>
+                function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+    
+                    reader.onload = function (e) {
+                        document.getElementById("img").style.display = "block   ";
+                        $('#img').attr('src', e.target.result).width(200).height(200);
+                    };
+    
+                    reader.readAsDataURL(input.files[0]);
+                    }
+                }
+            </script>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR YOU</title>
+    <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css}">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+<link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+<link th:href="@{https://fonts.googleapis.com/css2?family=Angkor&display=swap}" rel="stylesheet">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+<link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+<link th:href="@{https://fonts.googleapis.com/css2?family=Angkor&display=swap}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{../css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{../css/foryou.css}">
+    <link rel="ICON" th:href="@{../images/Evento tab logo.jpg}" type="image/icon" />
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div class="logo">
+                <div class="logo-E">
+                    <h1>E</h1>
+                </div>
+                <h1>EVENTO</h1>
+            </div>
+            <div class="profile">
+                <a th:href="@{/profile/user}"><img class="profile-img" th:src="@{../images/profile.png}" alt="profile">Profile</a>
+                <div class="profile">
+                    <form method="POST" th:action="@{/logout}">
+                        <input style="width :60px; margin: 18px; margin-bottom: 20px; border-radius: 10px;" type="submit" value="Logout"/>
+                        </form>
+                </div>
+            </div>
+                <label class="menu" for="menu-onof">
+                    <svg viewBox="0 0 100 80" width="30" height="30">
+                        <rect width="100" height="20"></rect>
+                        <rect y="30" width="100" height="20"></rect>
+                        <rect y="60" width="100" height="20"></rect>
+                    </svg>
+                </label>
+                <input type="checkbox" id="menu-onof">
+                
+                <nav>
+                    <ul>
+                        <li><a th:href="@{/mainPage/forYou}" class="nav-foryou active">FOR YOU</a></li>
+                        <li><a th:href="@{mainPage/featured}" class="nav-featured">FEATURED</a></li>
+                        
+                    </ul>
+                </nav> 
+                 
+        </div>
+            <nav>
+                <ul>
+                    <li><a th:href="@{/mainPage/forYou}" class="nav-foryou active">FOR YOU</a></li>
+                    <li><a th:href="@{mainPage/featured}" class="nav-featured">FEATURED</a></li>
+                    
+                </ul> 
+            </nav>
+            <div class="form">
+                <form th:action="@{mainPage/search(keyword=${search})}" method="get">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                    <input  th:value="${keyword}" name="search"class="search" type="search" placeholder="search..." >
+                </form>
+            </div>
+    </header>
+    <main>
+        <section th:each="foryou:${EVENT}" class="post">
+            <div class="card" style="width: 18rem;">
+                <img th:src="@{../upload/{x}(x=${foryou.imgDirectory})}" class="card-img-top" alt="eventImage">
+                <div class="card-body">
+                  <h5 th:text="${foryou.eventName}" class="card-title">Card title</h5>
+                  <p th:text="${foryou.eventDescription}" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p th:text="${foryou.imgDirectory}" class="card-text">Starting Date</p>
+                  
+                  
+                 
+               
+                </div>
+              </div>
+        </section>    
+            
+           
+           
+           
+        
+    </main>
+    <footer></footer>
+</body>
+
+</html>
